@@ -5,15 +5,27 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js"
+    "dev": "nodemon server.js"
   },
-  "keywords": ["Senai", "BodyQuery", "API"],
+  "keywords": [
+    "Senai",
+    "BodyQuery",
+    "API"
+  ],
   "author": "Julia Miranda",
   "license": "MIT",
   "description": "Projeto exemplo para filtros e verbos HTTP",
   "dependencies": {
     "dotenv": "^17.2.1",
-    "express": "^5.1.0", 
+    "express": "^5.1.0",
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliaefmiranda/body-query-com-POST-e-GET.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juliaefmiranda/body-query-com-POST-e-GET/issues"
+  },
+  "homepage": "https://github.com/juliaefmiranda/body-query-com-POST-e-GET#readme"
 }
