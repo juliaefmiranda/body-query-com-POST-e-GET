@@ -98,6 +98,33 @@ app.get('/varinhas', (req, res) => {
     });
 });
 
+//Body para modificar a rota varinhas
+app.post("/varinhas", (req, res) => {
+    const  { material, nucleo, comprimento } = req.body;
+
+    if ( !material || !nucleo || !comprimento) {
+        return res.status(400).json({
+            sucess: false,
+            message: "Material e núcleo são obrigatórios para uma varinha!"
+        });
+    }
+
+    const novaVarinha = {
+        id: varinhas.length + 1,
+        material: material,
+        nucleo: nucleo,
+        comprimento: comprimento
+    }
+
+    varinhas.push(novaVarinha);
+
+    res.status(201).json({
+        sucess: true,
+        message: "Varinha encontrada!",
+        data: novaVarinha
+    });
+});
+
 app.get("/pocoes", (req, res) => {
     const {nome, efeito } = req.query;
     let resultado = pocoes;
